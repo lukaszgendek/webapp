@@ -39,5 +39,5 @@ jobs:
 
     - name: Push Image
       run: |
-        docker login -u lukaszgendek -p ${{ DOCKER_HUB_TOKEN }}  
+        docker login -u lukaszgendek -p ${{ secrets.DOCKER_HUB_TOKEN }}  
         docker push lukaszgendek/webapp:latest  
