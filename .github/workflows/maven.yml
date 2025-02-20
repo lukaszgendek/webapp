@@ -36,3 +36,6 @@ jobs:
 
     - name: Build Image
       run: docker build . -t lukaszgendek/webapp:latest  
+
+    - name: Push Image
+      run: docker push lukaszgendek/webapp:latest  
