@@ -1,4 +1,5 @@
 FROM openjdk:17
-WORKDIR /usr/app/
-COPY . .
-ENTRYPOINT exec java -jar $APP_HOME/target/webapp-0.0.1-SNAPSHOT.jar
+ENV APP_HOME=/usr/app/
+WORKDIR $APP_HOME
+COPY target .
+ENTRYPOINT exec java -jar $APP_HOME/webapp-0.0.1-SNAPSHOT.jar
